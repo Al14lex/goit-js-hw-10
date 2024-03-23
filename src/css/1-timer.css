@@ -1,0 +1,71 @@
+body {
+    font-size: 30px;
+    display: block;
+    margin: 0 30px;
+    background-color: rgb(231, 229, 229);
+    padding-top: 50px;
+    padding-bottom: 100%;
+}
+.flatpickr-input{
+    width: 350px;
+    height: 50px;
+    background-color: transparent;
+    color:rgb(131, 131, 132);
+    border-radius: 20px;
+    border: 3px solid;
+    border-color: rgb(153, 111, 192);
+    font-size: 25px;
+    text-align: center;
+}
+
+body>button{
+    width: 100px;
+    height: 55px;
+    background-color:rgb(153, 111, 192);
+    border-radius: 20px;
+    border: 3px solid;
+    border-color: rgb(153, 111, 192);
+    font-size: 25px;
+    color: rgb(231, 229, 229);
+    text-align: center;
+    transition: border-color 250ms linear, color 250ms linear;
+}
+body >button:disabled{
+    background-color: rgb(203, 200, 200);
+    border-color: rgb(131, 131, 132);
+    color: rgb(131, 131, 132);
+}
+body>button:hover,
+body>button:focus{
+    border-color:rgb(101, 71, 128);
+    color:rgb(255, 255, 255);
+}
+.timer{
+    display: flex;
+    gap: 23px;
+    margin-top: 40px;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 115px;
+}
+.value {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.2;
+    letter-spacing: .04em;
+    color: rgb(131, 131, 132);
+}
+
+.label {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:rgb(101, 71, 128);
+    text-transform: uppercase
+}
