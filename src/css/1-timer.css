@@ -28,6 +28,7 @@ body>button{
     font-size: 25px;
     color: rgb(231, 229, 229);
     text-align: center;
+    cursor: pointer;
     transition: border-color 250ms linear, color 250ms linear;
 }
 body >button:disabled{
