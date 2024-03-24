@@ -4,10 +4,13 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector(".form");
-const delay = form.addEventListener("submit", event => {
+
+form.addEventListener("submit", event => {
     event.preventDefault();
-    const timer = event.currentTarget.elements.delay.value;
+    
+    const delay = parseInt(event.currentTarget.elements.delay.value, 10);
     const ratio = event.currentTarget.elements.state.value;
+
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             if (ratio === "fulfilled") {
@@ -15,20 +18,22 @@ const delay = form.addEventListener("submit", event => {
             } else {
                 reject();
             }
-        }, timer);
+        }, delay);
     });
-    promise.then(value => {
-        iziToast.success({
-            color: "green",
-            position: "topRight",
-            message: `✅ Fulfilled promise in ${timer}ms`
-        });
-    })
-        .catch(error => {
+
+    promise
+        .then(() => {
+            iziToast.success({
+                color: "green",
+                position: "topRight",
+                message: `✅ Fulfilled promise in ${delay}ms`
+            });
+        })
+        .catch(() => {
             iziToast.error({
                 color: "red",
                 position: "topRight",
-                message: `❌ Rejected promise in ${timer}ms`
+                message: `❌ Rejected promise in ${delay}ms`
             });
         });
 });
